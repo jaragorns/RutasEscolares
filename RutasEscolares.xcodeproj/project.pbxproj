@@ -17,6 +17,7 @@
 		0FCFB4AC209FFA6700E6ABA2 /* SchoolBuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFB4AB209FFA6700E6ABA2 /* SchoolBuses.swift */; };
 		0FCFB4AE209FFA7A00E6ABA2 /* Stops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFB4AD209FFA7A00E6ABA2 /* Stops.swift */; };
 		0FCFB4B1209FFAE700E6ABA2 /* DetalleRutaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFB4B0209FFAE700E6ABA2 /* DetalleRutaViewController.swift */; };
+		0FCFB4B820A0018000E6ABA2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FCFB4B720A0018000E6ABA2 /* MBProgressHUD.m */; };
 		3AA8E0CC3EE9B70D53E78144 /* Pods_RutasEscolares.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A65AA82A58E2F5E148C4D8 /* Pods_RutasEscolares.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,9 @@
 		0FCFB4AB209FFA6700E6ABA2 /* SchoolBuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolBuses.swift; sourceTree = "<group>"; };
 		0FCFB4AD209FFA7A00E6ABA2 /* Stops.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stops.swift; sourceTree = "<group>"; };
 		0FCFB4B0209FFAE700E6ABA2 /* DetalleRutaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleRutaViewController.swift; sourceTree = "<group>"; };
+		0FCFB4B520A0017F00E6ABA2 /* RutasEscolares-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RutasEscolares-Bridging-Header.h"; sourceTree = "<group>"; };
+		0FCFB4B620A0018000E6ABA2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0FCFB4B720A0018000E6ABA2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A64A531C4B88C5E9609C6965 /* Pods-RutasEscolares.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RutasEscolares.release.xcconfig"; path = "Pods/Target Support Files/Pods-RutasEscolares/Pods-RutasEscolares.release.xcconfig"; sourceTree = "<group>"; };
 		ABC6A6B8349D7354D5CA1C7F /* Pods-RutasEscolares.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RutasEscolares.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RutasEscolares/Pods-RutasEscolares.debug.xcconfig"; sourceTree = "<group>"; };
 		B2A65AA82A58E2F5E148C4D8 /* Pods_RutasEscolares.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RutasEscolares.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,7 @@
 		0FCFB492209FF8BC00E6ABA2 /* RutasEscolares */ = {
 			isa = PBXGroup;
 			children = (
+				0FCFB4B320A0011500E6ABA2 /* Resources */,
 				0FCFB4A5209FF98B00E6ABA2 /* UI */,
 				0FCFB4A8209FFA1700E6ABA2 /* Models */,
 				0FCFB4AF209FFA8900E6ABA2 /* Controllers */,
@@ -116,6 +121,24 @@
 				0FCFB49C209FF8BD00E6ABA2 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0FCFB4B320A0011500E6ABA2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFB4B420A0015D00E6ABA2 /* ProgressHub */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0FCFB4B420A0015D00E6ABA2 /* ProgressHub */ = {
+			isa = PBXGroup;
+			children = (
+				0FCFB4B620A0018000E6ABA2 /* MBProgressHUD.h */,
+				0FCFB4B720A0018000E6ABA2 /* MBProgressHUD.m */,
+				0FCFB4B520A0017F00E6ABA2 /* RutasEscolares-Bridging-Header.h */,
+			);
+			path = ProgressHub;
 			sourceTree = "<group>";
 		};
 		662F1F58112B12791B1D9282 /* Pods */ = {
@@ -170,6 +193,7 @@
 				TargetAttributes = {
 					0FCFB48F209FF8BC00E6ABA2 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -281,6 +305,7 @@
 				0FCFB4AE209FFA7A00E6ABA2 /* Stops.swift in Sources */,
 				0FCFB4AC209FFA6700E6ABA2 /* SchoolBuses.swift in Sources */,
 				0FCFB4A7209FF9B300E6ABA2 /* RutasTableViewCell.swift in Sources */,
+				0FCFB4B820A0018000E6ABA2 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +450,7 @@
 			baseConfigurationReference = ABC6A6B8349D7354D5CA1C7F /* Pods-RutasEscolares.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQT746D4LY;
 				INFOPLIST_FILE = RutasEscolares/Info.plist;
@@ -434,6 +460,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hellsingorg.RutasEscolares;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RutasEscolares/Resources/ProgressHub/RutasEscolares-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -444,6 +472,7 @@
 			baseConfigurationReference = A64A531C4B88C5E9609C6965 /* Pods-RutasEscolares.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FQT746D4LY;
 				INFOPLIST_FILE = RutasEscolares/Info.plist;
@@ -453,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hellsingorg.RutasEscolares;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RutasEscolares/Resources/ProgressHub/RutasEscolares-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

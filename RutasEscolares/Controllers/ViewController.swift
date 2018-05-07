@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         self.tableView.tableFooterView = UIView()
     }
+    
     // MARK: TableView Delegate & DataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,7 +72,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - Segue
     
-    /// Función encargada de preprara todos los parametros que se requieran en el proximo `ViewController`.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let index = (tableView.indexPathForSelectedRow?.row)!
@@ -89,6 +89,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 }
+
+// MARK: Extension
 
 extension CGFloat {
     static var random: CGFloat {

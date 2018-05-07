@@ -13,12 +13,16 @@ import GoogleMaps
 class DetalleRutaViewController: UIViewController {
     
     // MARK: Params & References
+    
     @IBOutlet weak var mapView: GMSMapView!
     private let locationManager = CLLocationManager()
     var nameRuta = String()
     var descriptionRuta = String()
     var stopsUrl = String()
     var stops = DataSource()
+    var loadingnHud = MBProgressHUD()
+    
+    // MARK: Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +36,10 @@ class DetalleRutaViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        loadingnHud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        loadingnHud.label.text = "Cargando"
+        
         Alamofire.request(stopsUrl).responseJSON { response in
             if let answer = response.result.value as? [String : Any] {
                 self.stops = DataSource(JSON: answer)!
@@ -41,6 +49,9 @@ class DetalleRutaViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: Functions
+    
     func loadStops(stops: DataSource) {
         
         var zoom = 15
@@ -61,10 +72,13 @@ class DetalleRutaViewController: UIViewController {
             marker.appearAnimation = GMSMarkerAnimation.pop
             marker.map = mapView
         }
+        loadingnHud.hide(animated: true)
         self.view = mapView
     }
     
 }
+
+// MARK: Extension
 
 extension DetalleRutaViewController: CLLocationManagerDelegate {
     
